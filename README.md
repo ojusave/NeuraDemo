@@ -1,12 +1,11 @@
 # NeuraDemo
-Sample Neura Application using SWIFT, which authenticates the user and allows him to subscribe to events
+This is a Sample Neura Application using SWIFT, which authenticates the user and allows him to subscribe to events
 
-Introduction
+# Requirements
+- Basic Swift Knowledge
+- xCode installed
 
-This is a sample code for integrating Neura with a native IOS application.
-Go to getting started with Neura for more details.
-
-Requirements
-
-Basic IOS knowledge.
-xCode installed.
+# Steps
+- You will need to add the 'Neura SDK' in your application.
+- Download it from here (https://cdn.theneura.com/files/product/ios/sdk/NeuraStandaloneSDKPackage.zip)
+- You can also use CocoaPods, the guidelines can be found here (https://dev.theneura.com/docs/guide/ios/setup)
