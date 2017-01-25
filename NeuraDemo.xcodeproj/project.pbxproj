@@ -15,6 +15,7 @@
 		32067D101E37DA4E00BD74FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32067D0E1E37DA4E00BD74FA /* LaunchScreen.storyboard */; };
 		32067D1B1E37DA4E00BD74FA /* NeuraDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32067D1A1E37DA4E00BD74FA /* NeuraDemoTests.swift */; };
 		32067D261E37DA4E00BD74FA /* NeuraDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32067D251E37DA4E00BD74FA /* NeuraDemoUITests.swift */; };
+		32067D361E37DBFB00BD74FA /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32067D331E37DBDB00BD74FA /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		32067D371E37DBFB00BD74FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				32067D361E37DBFB00BD74FA /* NeuraSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		32067CFF1E37DA4E00BD74FA /* NeuraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32067D021E37DA4E00BD74FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +64,7 @@
 		32067D211E37DA4E00BD74FA /* NeuraDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuraDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32067D251E37DA4E00BD74FA /* NeuraDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuraDemoUITests.swift; sourceTree = "<group>"; };
 		32067D271E37DA4E00BD74FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32067D331E37DBDB00BD74FA /* NeuraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NeuraSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				32067D021E37DA4E00BD74FA /* AppDelegate.swift */,
+				32067D331E37DBDB00BD74FA /* NeuraSDK.framework */,
 				32067D041E37DA4E00BD74FA /* ViewController.swift */,
 				32067D061E37DA4E00BD74FA /* Main.storyboard */,
 				32067D0C1E37DA4E00BD74FA /* Assets.xcassets */,
@@ -138,6 +155,7 @@
 				32067CFB1E37DA4D00BD74FA /* Sources */,
 				32067CFC1E37DA4D00BD74FA /* Frameworks */,
 				32067CFD1E37DA4D00BD74FA /* Resources */,
+				32067D371E37DBFB00BD74FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +216,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = YGQPHYL32T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					32067D151E37DA4E00BD74FA = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -420,6 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YGQPHYL32T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NeuraDemo",
+				);
 				INFOPLIST_FILE = NeuraDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neura.NeuraDemo;
@@ -433,6 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YGQPHYL32T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NeuraDemo",
+				);
 				INFOPLIST_FILE = NeuraDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neura.NeuraDemo;

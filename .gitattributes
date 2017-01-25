@@ -1,0 +1,2 @@
+NeuraDemo/ filter=lfs diff=lfs merge=lfs -text
+NeuraDemo/NeuraSDK.framework/NeuraDemo filter=lfs diff=lfs merge=lfs -text
